@@ -31,7 +31,7 @@ class _ImcState extends State<Imc> {
     setState(() {
       double peso = double.parse(pesoController.text);
       double altura = double.parse(alturaController.text) / 100;
-      double imc = peso/ (altura * peso);
+      double imc = peso/ (altura * altura);
 
       if(imc < 18.5){
         infor = "Abaixo do peso (${imc.toStringAsPrecision(3)})";
